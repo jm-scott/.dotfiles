@@ -2,6 +2,7 @@
 SCRIPT_PATH=$(dirname $(realpath -s $0))
 regex=".!(|.|git|*.swp)"
 shopt -s extglob
+cd $SCRIPT_PATH
 for entry in $regex
 do
 	# Remove current dotfile in home directory
