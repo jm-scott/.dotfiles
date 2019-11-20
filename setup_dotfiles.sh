@@ -1,16 +1,17 @@
 #!/bin/bash
-for entry in .*
+SCRIPT_PATH=$(dirname $(realpath -s $0))
+regex=".!(|.|git|*.swp)"
+shopt -s extglob
+for entry in $regex
 do
-	# Skip current and parent directory
-	if [[ "$entry" == "." ]] || [[ "$entry" == ".." ]]; then
-		continue
-	fi
 	# Remove current dotfile in home directory
-	if [[ -f "~/$entry" ]]; then
-		rm -f ~/$entry
+	if [[ -f "${HOME}/$entry" || -L "${HOME}/$entry" ]]; then
+		rm -f "${HOME}/$entry"
+		echo "Found pre-existing entry for: $entry" 
 	fi
 	# Copy local dotfile to home directory
-	ln -s $PWD/$entry ~/$entry
-	echo "$entry"
+	ln -s $SCRIPT_PATH/$entry ${HOME}/$entry
+	#chmod 666 $SCRIPT_PATH/$entry
+	echo "Added $entry"
 done
 exit 0
