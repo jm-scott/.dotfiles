@@ -1,5 +1,5 @@
 #!/bin/bash
-SCRIPT_PATH=$(dirname $(realpath -s $1))
+SCRIPT_PATH=$(dirname $(realpath -s $0))
 ssh_location="${HOME}/.ssh"
 config_location=$SCRIPT_PATH/ssh_config
 
