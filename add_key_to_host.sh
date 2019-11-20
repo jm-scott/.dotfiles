@@ -4,7 +4,7 @@ read -p "Enter user: " user
 
 read -p "Enter hostname: " hostname
 
-if [[! -f "${HOME}/.ssh/id_rsa.pub" ]]; then
+if [[ ! -f "${HOME}/.ssh/id_rsa.pub" ]]; then
 	echo "Public key does not exist."
 	exit 1
 fi
