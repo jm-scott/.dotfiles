@@ -9,5 +9,5 @@ if [[ ! -f "${HOME}/.ssh/id_rsa.pub" ]]; then
 	exit 1
 fi
 
-cat ~/.ssh/id_rsa.pub | ssh user@hostname "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"
+cat ~/.ssh/id_rsa.pub | ssh $user@$hostname "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"
 exit 0
