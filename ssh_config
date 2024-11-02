@@ -1,20 +1,5 @@
-Host caen
-	User jmscot
-	HostName oncampus-course.engin.umich.edu
-Host caeno
-	User jmscot
-	HostName login-course-2fa.engin.umich.edu
-Host nolan
-	User james
-	HostName mrfprod.com
-	IdentityFile ~/.ssh/id_rsa
-	Port 41287
-Host home
-	User james
-	HostName 192.168.1.87
-	IdentityFile ~/.ssh/id_rsa
-	Port 41287
-Host sgbot
-	User bitnami
-	Hostname 34.225.96.255
-	IdentityFile ~/.ssh/sGBotKey.pem
+Host github.com
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_ed25519
+
