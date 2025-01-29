@@ -60,4 +60,4 @@ SCRIPT_DIR="${0:A:h}"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 source <(fzf --zsh)
-source "$SCRIPT_DIR/aliases.zsh"
+# source "$SCRIPT_DIR/aliases.zsh"
